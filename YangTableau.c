@@ -26,6 +26,7 @@ int	Findnum(int arr[ROW][COL], int row, int col, int key)
 		}
 	}
 	printf("Do not find it!\n");
+	return 0;
 }
 void main()
 {
