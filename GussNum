@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+ 
+void menu()
+{
+    printf("******************************************\n");
+    printf("**************  1,play   *****************\n");
+    printf("**************  0,exit   *****************\n");
+    printf("******************************************\n");
+}
+ 
+void main()
+{
+    menu();
+    int select;
+    printf("请输入你的选择：");
+    scanf("%d",&select);
+    if(select != 0 && select != 1)
+    {
+        printf("输入错误！");
+    }
+    else if(select == 1)
+    {
+    int randNum = rand()%100;//[0,100)
+    int num = 0;
+    while(1)
+    {
+        printf("你猜的数字：\n");
+        scanf("%d",&num);
+        if(num == randNum)
+        {
+            printf("恭喜你，猜对了！");
+            break;
+        }
+        else if(num < randNum)
+        {
+             printf("猜小了，再来一次！\n");
+        }
+        else{
+             printf("猜大了，再来一次！\n");
+        }
+    }
+}
+else {
+    printf("ByeBye");
+}
+return 0;
+}
+
